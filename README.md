@@ -27,3 +27,10 @@ By combining **UX for L&D** with a **Lean Code** philosophy, this tool bridges t
 ---
 ## 🔒 Security & Setup
 To run this project locally, you must provide your own API Key.
+
+## ⚙️ Technical Architecture (Private Source)
+To protect intellectual property, the backend source code is kept in a private repository. 
+The system architecture includes:
+- **Node.js Environment:** Handling secure API communications.
+- **JSON Identity Schemas:** A proprietary structure for defining pedagogical and celebrity personas.
+- **Secure Integration:** Enterprise-grade handling of LLM prompts and context windows.
