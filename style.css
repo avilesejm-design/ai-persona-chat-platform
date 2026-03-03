@@ -1,0 +1,171 @@
+/* Lean CSS Design System - Imitating only the chat interface from image_2.png */
+
+:root {
+    --bg-main: #0a0a0a;          /* Fondo muy oscuro de la página */
+    --bg-chat-container: #101010;/* Fondo oscuro del contenedor de chat */
+    --bg-ai-box: #1e1e1e;        /* Fondo gris muy oscuro para los mensajes de AI */
+    --bg-user-box: #2d2d2d;      /* Fondo gris oscuro para los mensajes de usuario */
+    --text-color-light: #e0e0e0; /* Texto claro */
+    --text-color-dark: #a0a0a0;  /* Texto secundario claro (para AI text) */
+    --accent-orange: #d97706;    /* Naranja para el nombre de persona y botón Enviar */
+    --avatar-bg-ai: #333;         /* Fondo gris para AI avatar */
+    --avatar-bg-user: #d97706;    /* Fondo naranja para usuario avatar */
+    --border-color: #222;         /* Color de borde muy sutil */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--bg-main);
+    color: var(--text-color-light);
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Contenedor principal que se expande a lo ancho */
+.chat-container {
+    width: 100%;
+    max-width: 900px; /* Ancho máximo para el chat */
+    height: 90vh; /* Altura del chat */
+    background-color: var(--bg-chat-container);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.6);
+}
+
+/* Área de mensajes con desplazamiento */
+.chat-messages {
+    flex: 1;
+    padding: 25px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Estilos básicos para mensajes */
+.message-ai, .message-user {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.message-user {
+    justify-content: flex-end;
+}
+
+/* Avatares circulares */
+.ai-avatar-group, .user-avatar-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 45px;
+}
+
+.ai-avatar, .user-avatar {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color: white;
+    font-size: 16px;
+}
+
+.ai-avatar {
+    background-color: var(--avatar-bg-ai);
+}
+
+.user-avatar {
+    background-color: var(--avatar-bg-user);
+}
+
+/* Contenido de AI (Nombre + Caja de texto) */
+.ai-content {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    max-width: 75%;
+}
+
+.persona-name {
+    color: var(--accent-orange);
+    font-size: 11px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-left: 2px;
+}
+
+/* Cajas de texto de mensajes */
+.ai-text-box, .user-text-box {
+    padding: 15px 20px;
+    border-radius: 10px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.ai-text-box {
+    background-color: var(--bg-ai-box);
+    color: var(--text-color-dark);
+    border-top-left-radius: 0;
+}
+
+.user-text-box {
+    background-color: var(--bg-user-box);
+    color: var(--text-color-light);
+    border-top-right-radius: 0;
+    max-width: 75%;
+}
+
+.ai-text-box p, .user-text-box p {
+    margin: 0;
+}
+
+/* Área de entrada de texto en la parte inferior */
+.chat-input-area {
+    padding: 20px;
+    background-color: #1a1a1a; /* Un poco más claro que el contenedor principal */
+    border-top: 1px solid var(--border-color);
+    display: flex;
+    gap: 15px;
+}
+
+.chat-input-area input {
+    flex: 1;
+    padding: 12px 18px;
+    background-color: #2a2a2a;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    color: var(--text-color-light);
+    font-size: 14px;
+    outline: none;
+}
+
+.chat-input-area input::placeholder {
+    color: #666;
+}
+
+/* Botón "Enviar" naranja */
+.send-btn {
+    padding: 12px 25px;
+    background-color: var(--accent-orange);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14px;
+    transition: background-color 0.2s;
+}
+
+.send-btn:hover {
+    background-color: #b46305; /* Naranja más oscuro al pasar el mouse */
+}
