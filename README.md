@@ -15,9 +15,14 @@ By combining **UX for L&D** with a **Lean Code** philosophy, this tool bridges t
 - **Integration:** API-driven persona injection for real-time dialogue processing.
 - **Scalability:** Built to be integrated into broader educational ecosystems, such as the Austin Eco School project.
 
-## 📽️ Demo
-![Project Demo](./assets/demo-preview.gif)
-*Example: Conversing with a celebrity persona to practice informal language and engagement.*
+## 📽️ Project Demo
+
+[![Watch the AI Persona Chat Demo](https://img.youtube.com/vi/otf8k-JAFSg/maxresdefault.jpg)](https://www.youtube.com/watch?v=otf8k-JAFSg)
+
+> **Click the image above to watch the tool in action.**
+> This demo showcases the seamless persona switching and the student-oriented UX designed for high-engagement learning environments.
+
+> **Click the image above to watch the tool in action.** > This demo showcases the seamless persona switching and the student-oriented UX designed for high-engagement learning environments.
 
 ---
 ## 🔒 Security & Setup
